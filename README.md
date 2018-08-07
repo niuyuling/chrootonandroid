@@ -1,5 +1,7 @@
 # chrootonandroid
-本机SD卡分区
+    https://wiki.debian.org/ChrootOnAndroid
+
+# 本机SD卡分区
     root@LT18i:/ # fdisk /dev/block/mmcblk0                                                                                                                                           
 
     Command (m for help): p
@@ -17,7 +19,7 @@
     mkfs.vfat /dev/block/mmcblk0p1
     mkfs.ext3 /dev/block/mmcblk0p2
 
-制作镜像
+# 制作镜像
     http://webthen.net/thread-140-1-2.html
 	
 	
@@ -26,14 +28,14 @@
     DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true LC_ALL=C LANGUAGE=C LANG=C chroot /mnt /debootstrap/debootstrap --second-stage
     DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true LC_ALL=C LANGUAGE=C LANG=C chroot /mnt dpkg --configure -a
 
-安装opensh-server
+# 安装opensh-server
     chroot /data/local/debian/ /bin/bash
     export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
     export HOME=/root
     apt-get update
     apt-get install openssh-server
 
-启动ChrootOnAndroid
+# 启动ChrootOnAndroid
     SDDEVICEBLOCK=/dev/block/mmcblk0p2
     export ROOT=/data/local/debian/
     export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
