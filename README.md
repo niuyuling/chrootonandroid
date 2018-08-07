@@ -1,4 +1,7 @@
 # ChrootOnAndroid
+    设备
+    Sony lt18i, CM 11, Android 4.4.4, Kernel 3.4.0
+
     参考
 	https://wiki.debian.org/chroot
     https://wiki.debian.org/ChrootOnAndroid
@@ -25,7 +28,8 @@
     debian arm chroot linux镜像制作方法，
     http://webthen.net/thread-140-1-2.html
 	
-	
+	arm linux(raspberrypi)真机操作
+
     mount /dev/block/mmcblk0p2 /mnt
     debootstrap --foreign --arch armel wheezy /mnt http://ftp.cn.debian.org/debian/
     DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true LC_ALL=C LANGUAGE=C LANG=C chroot /mnt /debootstrap/debootstrap --second-stage
