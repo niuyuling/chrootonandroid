@@ -25,10 +25,10 @@
     mkfs.ext3 /dev/block/mmcblk0p2
 
 # 制作镜像
-    debian arm chroot linux镜像制作方法，
-    http://webthen.net/thread-140-1-2.html
+    #debian arm chroot linux镜像制作方法，
+        http://webthen.net/thread-140-1-2.html
 	
-	arm linux(raspberrypi)真机操作
+	#arm linux(raspberrypi)真机操作
 
     mount /dev/block/mmcblk0p2 /mnt
     debootstrap --foreign --arch armel wheezy /mnt http://ftp.cn.debian.org/debian/
