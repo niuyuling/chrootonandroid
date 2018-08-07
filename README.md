@@ -1,4 +1,6 @@
-# chrootonandroid
+# ChrootOnAndroid
+    参考
+	https://wiki.debian.org/chroot
     https://wiki.debian.org/ChrootOnAndroid
 
 # 本机SD卡分区
@@ -16,10 +18,11 @@
     Command (m for help): 
 
     格式化分区
-    mkfs.vfat /dev/block/mmcblk0p1
+    mkfs.vfat /dev/block/mmcblk0p1    #本机/sdcard卡目录
     mkfs.ext3 /dev/block/mmcblk0p2
 
 # 制作镜像
+    debian arm chroot linux镜像制作方法，
     http://webthen.net/thread-140-1-2.html
 	
 	
